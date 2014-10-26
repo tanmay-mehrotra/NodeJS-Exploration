@@ -1,0 +1,23 @@
+- which editor is this --> atom ??
+- console.log(process.argv)
+- prompt module for accepting user input
+  	prompt.start();
+  	prompt.get(['first', 'last'], function(err, result){
+  	  if(err){
+  	     console.log(err);
+  	  }
+  	  console.log(result.first);
+  	  console.log(result.last);
+  	});
+
+
+ - we can also pass complex objects as well using the promt
+
+ - cherrio module
+
+ what is the best source to learn node ??
+
+ - optimizely hiring !!!!!
+
+ - code inspector
+

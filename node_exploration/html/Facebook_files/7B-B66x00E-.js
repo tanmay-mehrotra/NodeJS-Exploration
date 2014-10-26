@@ -1,0 +1,5 @@
+/*!CK:1185223236!*//*1410748292,*/
+
+if (self.CavalryLogger) { CavalryLogger.start_js(["6\/rpw"]); }
+
+__d("FBAnimatedProgressBar.react",["Animation","React","cx","joinClasses"],function(a,b,c,d,e,f,g,h,i,j){var k=h.PropTypes,l=300,m=h.createClass({displayName:'FBAnimatedProgressBar',propTypes:{className:k.string,duration:k.number.isRequired,percent:k.number.isRequired},componentDidMount:function(){this._animation=null;this._totalWidth=this.getDOMNode().offsetWidth;},componentDidUpdate:function(n,o){if(n.percent==this.props.percent)return;var p=this.props.percent,q=this.props.duration,r=(parseInt(this._totalWidth,10)*parseInt(p,10))/100;if(!this._animation)this._animation=new g(this.refs.fill.getDOMNode());this._animation.stop().to('width',parseInt(r,10)).duration(this.props.animate?Math.max(parseInt(q,10),l):0).go();},render:function(){var n=j(this.props.className,"_1c5");return (h.createElement(h.DOM.div,{className:n},h.createElement(h.DOM.div,{className:"_1c6",ref:"fill"})));}});e.exports=m;},null);
