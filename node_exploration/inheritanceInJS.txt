@@ -1,0 +1,4 @@
+abc©d abcdefgh © every function has a property called "prototype". If u wish to add some property/method to your function from outside the function then u should attached it using "prototype"
+
+- you have to always use 'this' to call functions in JS , this is the similar concept we have of self in python.
+In java implicit 'this' is passed to all the functions while in JS or Py this is explicit.

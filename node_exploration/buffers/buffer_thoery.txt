@@ -1,0 +1,19 @@
+- so bascially to talk over the wire or to read data from a DB or from a filesystem we need to convert our string/data 
+  into byte streams. We just cant simply use strings over here , as over the wire we can only send bits.
+
+-  so buffers in node provides a way to do this encoding and we can do encoding in various format like ascii, utf-8, utf-16 etc.
+
+- so when we read a string lets say 'abc©d' and use utf-8 scheme it gets converted to  '61 62 63 c2 a9 64' where 'c2 a9' represents
+  unicode for © . Now comming to utf-8 each character is presented using set of octet/byte(also called byte).
+
+  For example 'a' -- > this can be easily represented using a single byte ... 'a' as we know has a ascii code of 91 and when 
+  converted to hex it come to 61 which we are seeing over here.
+
+  however © --> it cannot be represented using just 8 bits so we consume 16 bits to represent it ...these 16 bits where a group of
+  4 bits makes a hex digit results in utf-8 code 'c2 a9'
+
+So as a conclusion we can observe we have effectively converted out string into bytes and content of each byte is represented using
+hex notation.
+  
+
+
