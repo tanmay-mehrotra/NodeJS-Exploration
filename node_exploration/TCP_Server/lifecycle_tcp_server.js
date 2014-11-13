@@ -1,4 +1,4 @@
-var port = 4001;
+var port = 4000;
 var server = require('net').createServer();
 
 server.on('listening', function(){
@@ -7,8 +7,12 @@ server.on('listening', function(){
 
 server.on('connection', function(socket){
 	console.log('Server has a new connection');
-	socket.end();
-	server.close();
+	socket.on('data',function(data){
+		console.log('data received on server side ' + data.toString());
+	});
+	socket.write("Hey this is server");
+	//socket.end();
+	//server.close();
 });
 
 server.on('close', function(){
